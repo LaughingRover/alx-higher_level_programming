@@ -1,0 +1,15 @@
+#!/bin/bash
+
+if [ -z "$PYFILE" ]; then
+  echo "Error: PYFILE environment variable not set."
+  exit 1
+fi
+
+if [ -f "$PYFILE" ]; then
+  # Use 'python3' to run the Python script.
+  python3 "$PYFILE"
+else
+  echo "Error: File '$PYFILE' does not exist."
+  exit 1
+fi
+
